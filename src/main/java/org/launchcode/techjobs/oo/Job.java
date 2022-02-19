@@ -48,6 +48,17 @@ public class Job {
     }
 
 
+    public String toString() {
+        return ("\nID: " + (this.getId() == 0 ? "Data not available" : this.getId()))
+                + ("\nName: " + (this.getName().equals("") ? "Data not available" : this.getName()))
+                + ("\nEmployer: " + (this.getEmployer().equals("") ? "Data not available" : this.getEmployer()))
+                + ("\nLocation: " + (this.getLocation().equals("") ? "Data not available" : this.getLocation()))
+                + ("\nPosition Type: " + (this.getPositionType().equals("") ? "Data not available" : this.getPositionType()))
+                + ("\nCore Competency: " + (this.getCoreCompetency().equals("") ? "Data not available" : this.getCoreCompetency())) + "\n";
+
+    }
+
+
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
