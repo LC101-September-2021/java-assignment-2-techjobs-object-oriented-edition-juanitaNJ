@@ -1,9 +1,5 @@
 package org.launchcode.techjobs.oo;
 
-import org.launchcode.techjobs.oo.tests.JobField;
-
-import java.util.Objects;
-
 public class PositionType extends JobField {
 
     private int id;

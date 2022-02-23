@@ -1,6 +1,4 @@
-package org.launchcode.techjobs.oo.tests;
-
-import org.launchcode.techjobs.oo.Employer;
+package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 

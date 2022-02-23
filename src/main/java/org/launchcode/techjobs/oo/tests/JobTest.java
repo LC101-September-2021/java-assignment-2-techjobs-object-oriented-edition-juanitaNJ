@@ -38,21 +38,21 @@ public class JobTest {
     }
 
     @Test
-    public void testReturnBlankLines() {
+    public void testToStringStartsAndEndsWithNewLine() {
         Job line_check = new Job("AA", new Employer("AA"), new Location("AA"), new PositionType("AA"), new CoreCompetency("AA"));
         assertTrue(line_check.toString().startsWith("\n"));
         assertTrue(line_check.toString().endsWith("\n"));
     }
 
     @Test
-    public void testForFields() {
+    public void testToStringContainsCorrectLabelsAndData() {
         Job field_check = new Job("AA", new Employer("AA"), new Location("AA"), new PositionType("AA"), new CoreCompetency("AA"));
         String field_checks = "\nID: " + field_check.getId() + "\nName: " + field_check.getName() + "\nEmployer: " + field_check.getEmployer() + "\nLocation: " + field_check.getLocation() + "\nPosition Type: " + field_check.getPositionType() + "\nCore Competency: " + field_check.getCoreCompetency() + "\n";
         assertEquals(field_checks, field_check.toString());
     }
 
     @Test
-    public void testForEmpty() {
+    public void testToStringHandlesEmptyField() {
         Job empty_check = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
         String empty_checks = ("\nID: " + (empty_check.getId() == 0 ? "Data not available" : empty_check.getId()))
                 + ("\nName: " + (empty_check.getName().equals("") ? "Data not available" : empty_check.getName()))
